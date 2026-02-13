@@ -89,7 +89,8 @@
             color: white; 
             position: relative;
             z-index: 5;
-            touch-action: none; 
+            touch-action: none;
+        }
 
         .flower {
             position: absolute;
@@ -97,9 +98,13 @@
             font-size: 24px;
             animation: fall linear forwards;
             user-select: none;
+            pointer-events: none;
+            z-index: 99;
         }
 
-        @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+        @keyframes fall { 
+            to { transform: translateY(110vh) rotate(360deg); } 
+        }
     </style>
 </head>
 <body>
@@ -142,7 +147,6 @@
             }
         }
 
-        
         function handleNoClick() {
             noCount++;
             if (noCount >= 7) {
