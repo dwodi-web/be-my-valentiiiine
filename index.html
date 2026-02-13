@@ -149,16 +149,10 @@
 
         function handleNoClick() {
             noCount++;
-
-            
             if (noCount === 1) {
-                
-                mainImg.src = "https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyNWpicDJsNWZsdHlnY2p4dm9zcnQweTJyb2E5ZTVjaDBtZnA0MWJscSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HqRn3u6PsIoIFynans/giphy.gif";
-                
-                
-                 
+                mainImg.src = "https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyaTlwNjNsczFoc2J1MG4zbmFrYW5kbXJzZXRjdWQzZWF0OHAyeGRkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YZOsKxJfmvzG0/giphy.gif";
+                questionText.innerText = "Noo Pweaaase"; 
             }
-            // ----------------------------------------------
 
             if (noCount >= 7) {
                 showSadPage();
@@ -171,10 +165,8 @@
             const padding = 50;
             const maxX = window.innerWidth - noBtn.offsetWidth - padding;
             const maxY = window.innerHeight - noBtn.offsetHeight - padding;
-            
             const randomX = Math.max(padding, Math.random() * maxX);
             const randomY = Math.max(padding, Math.random() * maxY);
-            
             noBtn.style.position = 'fixed';
             noBtn.style.left = randomX + 'px';
             noBtn.style.top = randomY + 'px';
@@ -190,7 +182,10 @@
         function celebrate() {
             questionText.innerText = "YAAAAAAAAAAYYY";
             subText.style.display = "block";
-            mainImg.src = "https://media.tenor.com/8pA_I_7i7-8AAAAi/mochi-peachcat-cat.gif";
+
+            
+            mainImg.src = "https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyY3dkMnZoNXM5b24wd2xrMGhmMXoxYnJneTUxdzV6ZXl4dnJtZm96YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HqRn3u6PsIoIFynans/giphy.gif"; 
+
             finalBtns.style.display = 'none';
             setInterval(createFlower, 150);
         }
