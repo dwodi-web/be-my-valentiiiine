@@ -16,33 +16,38 @@
             font-family: 'Arial', sans-serif;
             overflow: hidden;
             text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         #main-image {
-            width: 180px;
+            max-width: 180px;
+            width: 50%;
             display: none;
             margin-bottom: 20px;
             border-radius: 15px;
         }
 
         #question-text {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #d81b60;
             margin-bottom: 10px;
             font-weight: bold;
             display: none;
+            width: 90%;
         }
 
         #sub-text {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #808080;
             margin-bottom: 30px;
             display: none;
+            width: 90%;
         }
 
         #number-btn {
-            padding: 15px 40px;
-            font-size: 1.5rem;
+            padding: 12px 35px;
+            font-size: 1.3rem;
             background-color: #e91e63;
             color: white;
             border: none;
@@ -50,27 +55,27 @@
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: all 0.3s ease-in-out;
-            transform: scale(1);
+            max-width: 80%;
         }
 
         .final-buttons {
             display: none;
             position: relative;
             width: 100%;
-            height: 100px;
+            height: 80px;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .btn {
-            padding: 15px 30px;
-            font-size: 1.2rem;
+            padding: 12px 25px;
+            font-size: 1.1rem;
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            transition: 0.3s;
-            min-width: 100px;
+            transition: 0.2s;
+            min-width: 90px;
         }
 
         #yes-btn { 
@@ -83,7 +88,7 @@
             background-color: #f44336; 
             color: white; 
             position: absolute;
-            left: calc(50% + 60px);
+            left: calc(50% + 20px);
         }
 
         .flower {
@@ -108,7 +113,7 @@
 
     <div class="final-buttons" id="final-btns">
         <button id="yes-btn" class="btn" onclick="celebrate()">Yes</button>
-        <button id="no-btn" class="btn" onmouseover="handleNoInteraction()">No</button>
+        <button id="no-btn" class="btn" onmouseover="handleNoInteraction()" onclick="handleNoInteraction()">No</button>
     </div>
 
     <script>
@@ -147,8 +152,9 @@
         }
 
         function moveNo() {
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            const padding = 20;
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
             noBtn.style.position = 'fixed';
             noBtn.style.left = x + 'px';
             noBtn.style.top = y + 'px';
@@ -174,7 +180,7 @@
             flower.classList.add('flower');
             flower.style.left = Math.random() * 100 + 'vw';
             flower.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            flower.style.fontSize = (Math.random() * 20 + 20) + 'px';
+            flower.style.fontSize = (Math.random() * 15 + 20) + 'px';
             document.body.appendChild(flower);
             setTimeout(() => flower.remove(), 5000);
         }
