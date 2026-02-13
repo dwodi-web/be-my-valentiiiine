@@ -65,7 +65,7 @@
             height: 80px;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 40px;
         }
 
         .btn {
@@ -75,7 +75,7 @@
             border-radius: 10px;
             cursor: pointer;
             transition: 0.2s;
-            min-width: 90px;
+            min-width: 95px;
         }
 
         #yes-btn { 
@@ -87,8 +87,8 @@
         #no-btn { 
             background-color: #f44336; 
             color: white; 
-            position: absolute;
-            left: calc(50% + 20px);
+            position: relative;
+            left: 0;
         }
 
         .flower {
@@ -152,7 +152,7 @@
         }
 
         function moveNo() {
-            const padding = 20;
+            const padding = 50;
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
             noBtn.style.position = 'fixed';
@@ -164,6 +164,7 @@
             questionText.innerText = "Aight ):";
             mainImg.src = "https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyYTQ2bHF5dXg3aml2bHgydXZnZ21rbjhoZzI2enBzYjE5OXBmNTltNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7SF5scGB2AFrgsXP63/giphy.gif"; 
             finalBtns.style.display = 'none';
+            subText.style.display = 'none';
         }
 
         function celebrate() {
