@@ -89,8 +89,7 @@
             color: white; 
             position: relative;
             z-index: 5;
-            touch-action: none; /* يمنع التفاعلات الافتراضية للجوال لتجنب التكرار */
-        }
+            touch-action: none; 
 
         .flower {
             position: absolute;
@@ -107,7 +106,7 @@
 
     <img id="main-image" src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyaTlwNjNsczFoc2J1MG4zbmFrYW5kbXJzZXRjdWQzZWF0OHAyeGRkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YZOsKxJfmvzG0/giphy.gif" alt="GIF">
     
-    <div id="question-text">Will you be my valentine?</div>
+    <div id="question-text">Would you be my valentine?</div>
     <div id="sub-text">TY FOR BEING MY VALENTINE ><</div>
 
     <button id="number-btn" onclick="nextNumber()">Six</button>
@@ -143,7 +142,7 @@
             }
         }
 
-        // تم تغيير الوظيفة لتعتمد على الضغط فقط لضمان دقة العداد 7 مرات
+        
         function handleNoClick() {
             noCount++;
             if (noCount >= 7) {
