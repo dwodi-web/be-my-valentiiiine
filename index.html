@@ -143,7 +143,8 @@
         }
 
         function handleNoInteraction() {
-            noCount++;
+            noCount = noCount + 1;
+            // التحقق من الرقم 7 بدقة
             if (noCount >= 7) {
                 showSadPage();
             } else {
@@ -153,11 +154,15 @@
 
         function moveNo() {
             const padding = 50;
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
+            const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+            const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+            
+            const randomX = Math.max(padding, Math.random() * maxX);
+            const randomY = Math.max(padding, Math.random() * maxY);
+            
             noBtn.style.position = 'fixed';
-            noBtn.style.left = Math.max(padding, x) + 'px';
-            noBtn.style.top = Math.max(padding, y) + 'px';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
         }
 
         function showSadPage() {
