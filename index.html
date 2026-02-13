@@ -41,6 +41,8 @@
             border-radius: 10px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+            transform: scale(1);
         }
 
         .final-buttons {
@@ -88,6 +90,7 @@
 
     <script>
         let step = 0;
+        let currentScale = 1;
         const numbers = ["Seven", "Eight", "Nine"];
         const numBtn = document.getElementById('number-btn');
         const finalBtns = document.getElementById('final-btns');
@@ -98,6 +101,9 @@
         function nextNumber() {
             if (step < numbers.length) {
                 numBtn.innerText = numbers[step];
+                // Increase scale by 0.3 each click
+                currentScale += 0.3;
+                numBtn.style.transform = `scale(${currentScale})`;
                 step++;
             } else {
                 numBtn.style.display = 'none';
