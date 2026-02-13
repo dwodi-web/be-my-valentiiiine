@@ -149,6 +149,17 @@
 
         function handleNoClick() {
             noCount++;
+
+            
+            if (noCount === 1) {
+                
+                mainImg.src = "https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyaTlwNjNsczFoc2J1MG4zbmFrYW5kbXJzZXRjdWQzZWF0OHAyeGRkNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YZOsKxJfmvzG0/giphy.gif";
+                
+                
+                questionText.innerText = "Noo Pweaaase"; 
+            }
+            // ----------------------------------------------
+
             if (noCount >= 7) {
                 showSadPage();
             } else {
