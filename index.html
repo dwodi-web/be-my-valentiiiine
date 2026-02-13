@@ -115,7 +115,7 @@
         function nextNumber() {
             if (step < numbers.length) {
                 numBtn.innerText = numbers[step];
-                currentScale += 0.4;
+                currentScale += 0.1;
                 numBtn.style.transform = `scale(${currentScale})`;
                 step++;
             } else {
@@ -136,8 +136,7 @@
 
         function celebrate() {
             questionText.innerText = "I love you you soo muuuchh ❤️";
-            // PASTE YOUR SECOND GIF LINK HERE (The one shown after clicking Yes)
-            mainImg.src = "PUT_SECOND_GIF_URL_HERE";
+            mainImg.src = "https://media.tenor.com/8pA_I_7i7-8AAAAi/mochi-peachcat-cat.gif";
             finalBtns.style.display = 'none';
             setInterval(createHeart, 150);
         }
